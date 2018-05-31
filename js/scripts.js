@@ -5,11 +5,11 @@ $(document).ready(function(){
     var two = parseInt($("#sidetwo").val());
     var three = parseInt($("#sidethree").val());
     debugger;
-    if (one >= 180 || one <= 0 || two >= 180 || two >= 0 || three >= 180 || three >= 0 ){
+    if (one >= 180 || one < 1 || two >= 180 || two < 1 || three >= 180 || three < 1 ){
       alert("No")
     } else if (one === two && one === three){
       alert("Equal");
-    } else if (one === 0 || two == 0 || three === 0){
+    } else if (one+two+three <= 0) {
       alert("not a triangle");
     }
     else if (one === two || one === three || three === two){
